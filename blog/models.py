@@ -47,7 +47,7 @@ class Post(models.Model):
 
     # 文章摘要，可以没有文章摘要，但默认情况下 Chardield 要求我们必须存储数据，否则就会报错。
     # 指定 Charfield 的blank=True 参数值后就可以允许为空了。
-    excerpt = models.Charfield(max_length=200, blank=True)
+    excerpt = models.CharField(max_length=200, blank=True)
 
 
     # 这是分类与标签，分类与标签的模型我们已经定义在上面。
